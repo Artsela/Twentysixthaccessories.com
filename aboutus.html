@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Accessories Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f0ff, #f5f5f5);
+      color: #333;
+      transition: background 0.5s, color 0.5s;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background tech effect */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(90deg, rgba(0,115,230,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(0,115,230,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: movebg 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes movebg {
+      from { background-position: 0 0; }
+      to { background-position: 40px 40px; }
+    }
+
+    .dark-mode {
+      background: linear-gradient(135deg, #0f2027, #1a1a1a);
+      color: #f5f5f5;
+    }
+
+    .dark-mode::before {
+      background-image: 
+        linear-gradient(90deg, rgba(77,166,255,0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(77,166,255,0.08) 1px, transparent 1px);
+    }
+
+    .about-section {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .dark-mode .about-section {
+      background: rgba(42,42,42,0.9);
+      color: #f5f5f5;
+    }
+
+    .about-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #0073e6;
+      transition: color 0.3s;
+    }
+
+    .dark-mode .about-section h2 {
+      color: #4da6ff;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .about-focus {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f0f8ff;
+      border-left: 5px solid #0073e6;
+      border-radius: 8px;
+      transition: background 0.5s, border-color 0.5s;
+    }
+
+    .dark-mode .about-focus {
+      background: #2e2e2e;
+      border-left-color: #4da6ff;
+    }
+
+    .about-focus h3 {
+      margin-bottom: 10px;
+      color: #0073e6;
+    }
+
+    .dark-mode .about-focus h3 {
+      color: #4da6ff;
+    }
+
+    .about-focus ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-focus li {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .about-focus li::before {
+      content: "✔ ";
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    .dark-mode .about-focus li::before {
+      color: #4da6ff;
+    }
+
+    /* Toggle Button */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0073e6;
+      color: #fff;
+      font-size: 1rem;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+
+    .toggle-btn:hover {
+      background: #005bb5;
+    }
+
+    .dark-mode .toggle-btn {
+      background: #4da6ff;
+      color: #000;
+    }
+
+    /* Contact Us Section */
+    .contact-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #0073e6;
+    }
+
+    .dark-mode .contact-section h3 {
+      color: #4da6ff;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #0073e6;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.1);
+      background: #005bb5;
+    }
+
+    .dark-mode .contact-icons a {
+      background: #4da6ff;
+      color: #000;
+    }
+    .contact-logo {
+  width: 30px; /* adjust size as needed */
+  height: 30px;
+  margin: 0 10px;
+}
+  </style>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to <strong>TWENTYSIXTH 26 Accessories</strong> your trusted place for high-quality phone and computer accessories.</p>
+    <p>We started with a simple goal: to make it easier for everyone to find reliable, affordable, and stylish accessories that keep your devices protected, connected, and performing at their best.</p>
+    <p>From phone cases, chargers, and headphones to computer keyboards, mice, and other essentials. we bring you the latest products with quality you can trust.</p>
+
+    <div class="about-focus">
+      <h3>Our Focus</h3>
+      <ul>
+        <li>Quality products at fair prices</li>
+        <li>Modern designs that match your style</li>
+        <li>Friendly service and support</li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+<div class="contact-section">
+  <h3>Contact Us</h3>
+  <div class="contact-icons">
+    <!-- Facebook Logo -->
+    <a href="https://www.facebook.com/profile.php?id=61563841033273" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="contact-logo">
+    </a>
+    <!-- Instagram Logo -->
+    <a href="https://www.instagram.com/twentysixth_accessories/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="contact-logo">
+    </a>
+    <!-- Telegram Logo -->
+    <a href="https://t.me/twentysixth26" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="contact-logo">
+    </a>
+  </div>
+</div>
+    </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      const btn = document.querySelector(".toggle-btn");
+      if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+      }
+    }
+  </script>
+  <!-- Load Font Awesome -->
+  <script src="https://kit.fontawesome.com/6dcf5f6fd5.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

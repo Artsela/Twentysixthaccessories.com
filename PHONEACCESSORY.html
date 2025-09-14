@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHONE ACCESSORY</title>
+  <style>
+    /* Product Grid Layout */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 0 50px;
+      margin: 40px 0;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Product Image Container */
+    .product-image {
+      inline-size: 100%;
+      block-size: 0;
+      padding-block-end: 100%; /* 1:1 aspect ratio (square) */
+      position: relative;
+      overflow: hidden;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Product Images */
+    .product-image img {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05); /* Subtle zoom */
+    }
+
+    /* Product Info */
+    .product-info {
+      padding: 15px;
+    }
+
+    /* Pricing Styles */
+    .product-pricing {
+      margin-block-start: 15px;
+    }
+
+    .prices {
+      display: flex;
+      gap: 10px;
+      margin-block-end: 12px;
+    }
+
+    .current-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+
+    .original-price {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    /* Add-to-Cart Button */
+    .add-to-cart-btn {
+      inline-size: 100%;
+      padding: 10px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #333;
+    }
+
+    /* Section Title */
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 40px;
+      color: #222;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #ff6b6b;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 1200px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Products Section -->
+  <section class="popular">
+    <h2>PHONE ACCESSORY</h2>
+    <div class="product-grid">
+      
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/T3pro.jpg" alt="SOUND PEATS T3 PRO" />
+        </div>
+        <div class="product-info">
+          <h3>SOUND PEATS T3 PRO</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats clear.jpg" alt="SOUNDPEATS CLEAR" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS CLEAR</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats clear pods.jpg" alt="SOUNDPEATS CLEAR PODS" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS CLEAR PODS</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats life lite.jpg" alt="SOUNDPEATS LIFE LITE" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS LIFE LITE</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Products Section -->
+  <section class="popular">
+    <div class="product-grid">
+      
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/T3pro.jpg" alt="SOUND PEATS T3 PRO" />
+        </div>
+        <div class="product-info">
+          <h3>SOUND PEATS T3 PRO</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats clear.jpg" alt="SOUNDPEATS CLEAR" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS CLEAR</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats clear pods.jpg" alt="SOUNDPEATS CLEAR PODS" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS CLEAR PODS</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="picture/soundpeats life lite.jpg" alt="SOUNDPEATS LIFE LITE" />
+        </div>
+        <div class="product-info">
+          <h3>SOUNDPEATS LIFE LITE</h3>
+          <div class="product-pricing">
+            <div class="prices">
+              <span class="current-price">$19.00</span>
+              <span class="original-price">$29.00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

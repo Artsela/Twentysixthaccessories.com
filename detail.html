@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-images img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .product-info h1 {
+      margin: 0 0 15px;
+      font-size: 28px;
+      color: #222;
+    }
+
+    .prices {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .current-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+
+    .original-price {
+      font-size: 16px;
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .description {
+      margin: 20px 0;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .add-to-cart-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #333;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Product Images -->
+    <div class="product-images">
+      <img src="picture/T3pro.jpg" alt="SOUNDPEATS T3 PRO Front">
+      <img src="picture/T3pro-2.jpg" alt="SOUNDPEATS T3 PRO Side">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <h1>SOUNDPEATS T3 PRO</h1>
+      <div class="prices">
+        <span class="current-price">$19.00</span>
+        <span class="original-price">$29.00</span>
+      </div>
+
+      <p class="description">
+        The SOUNDPEATS T3 PRO delivers premium audio with balanced bass and treble.  
+        ✅ Bluetooth 5.1<br>
+        ✅ Noise Cancellation<br>
+        ✅ 20 Hours Playtime<br>
+        ✅ Compact charging case<br>
+        ✅ Comfortable fit
+      </p>
+
+      <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      <br>
+      <a href="PHONEACCESSORY.html" class="back-link">← Back to Products</a>
+    </div>
+  </div>
+
+</body>
+</html>
